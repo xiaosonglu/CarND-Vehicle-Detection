@@ -13,6 +13,7 @@ The goals / steps of this project are the following:
 [image1]: ./output_images/example1.png
 [image2]: ./output_images/example2.png
 [image3]: ./output_images/example3.png
+[image4]: ./output_images/example4.png
 [video1]: ./out.mp4
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/513/view) Points
@@ -77,7 +78,13 @@ In the sixth code cell in Jupyter notebok, I recorded the positions of positive 
 
 ###Discussion
 
-####1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
+#### Discussion includes some consideration of problems/issues faced, what could be improved about their algorithm/pipeline, and what hypothetical cases would cause their pipeline to fail.
 
-There are some frames where the bounding boxes are drawn onto non-vehicles. More training on the classifier to identify non-veihicles might be required. 
+There are some frames where the bounding boxes are drawn onto non-vehicles such as the following example.
+![alt text][image4]
 
+The following steps might be helpful to improve the pipeline:
+
+* Combine with varying window sizes such as a smaller window size to detect cars further to the camera.
+* Try different combinations of HOG parameters to achieve a higher accuracy on the classifier.
+* Apply data augmentation with different test sets to train the classifier to identify non-veihicles such as trees or shadowing area.
